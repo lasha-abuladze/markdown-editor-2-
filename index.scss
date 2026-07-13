@@ -1,0 +1,96 @@
+$color--light-grey: #35393f;
+$color--dark-grey: #2b2d31;
+$color--white: #ffffff;
+$color--orange: #e46643;
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-colum() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  @include flex-row();
+  justify-content: center;
+}
+
+.display-none {
+  display: none !important;
+}
+
+body {
+  .main {
+    .main--header {
+      background-color: $color--dark-grey;
+      @include flex-row();
+      gap: 24px;
+      padding-right: 16px;
+      box-sizing: border-box;
+      .close-open--btns {
+        .btn {
+          width: 56px;
+          height: 56px;
+          background-color: $color--light-grey;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
+
+      .input-container--main-header {
+        @include flex-row();
+        gap: 16px;
+
+        .input-label {
+          label {
+            display: none;
+          }
+
+          input {
+            border: none;
+            outline: none;
+            background: none;
+            color: $color--white;
+            font-size: 13px;
+            width: 100px;
+          }
+
+          input::placeholder {
+            color: $color--white;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .delete-save {
+        @include flex-row();
+        gap: 16px;
+        // align-self:;
+        margin-left: auto;
+
+        .btn--save {
+          background-color: $color--orange;
+          width: 36px;
+          height: 36px;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

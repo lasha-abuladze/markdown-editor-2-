@@ -1,0 +1,15 @@
+{
+  "name": "markdown-editor-2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./index.scss ./index.css"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

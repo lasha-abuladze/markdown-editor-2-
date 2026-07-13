@@ -1,0 +1,73 @@
+.btn {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-none {
+  display: none !important;
+}
+
+body .main .main--header {
+  background-color: #2b2d31;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+body .main .main--header .close-open--btns .btn {
+  width: 56px;
+  height: 56px;
+  background-color: #35393f;
+}
+body .main .main--header .logo {
+  display: none;
+}
+body .main .main--header .input-container--main-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+body .main .main--header .input-container--main-header .input-label label {
+  display: none;
+}
+body .main .main--header .input-container--main-header .input-label input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #ffffff;
+  font-size: 13px;
+  width: 100px;
+}
+body .main .main--header .input-container--main-header .input-label input::placeholder {
+  color: #ffffff;
+  font-size: 13px;
+}
+body .main .main--header .delete-save {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+body .main .main--header .delete-save .btn--save {
+  background-color: #e46643;
+  width: 36px;
+  height: 36px;
+}
+body .main .main--header .delete-save .btn--save span {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */

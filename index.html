@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Markdown Editor</title>
+  </head>
+  <body>
+    <nav class="navigation"></nav>
+    <main class="main">
+      <header class="main--header">
+        <div class="close-open--btns">
+          <button class="btn btn--open-nav">
+            <img src="./assets/icon-menu.svg" alt="menu icon" />
+          </button>
+
+          <button class="btn btn--close-nav display-none">
+            <img src="./assets/icon-close.svg" alt="close icon" />
+          </button>
+        </div>
+
+        <img class="logo" src="./assets/logo.svg" alt="logo" />
+
+        <div class="input-container--main-header">
+          <img src="./assets/icon-document.svg" alt="documen icon" />
+          <div class="input-label">
+            <label for="input--document-name">Dcoumet Name</label>
+            <input
+              id="input--document-name"
+              type="text"
+              placeholder="welcom.md"
+            />
+          </div>
+        </div>
+
+        <div class="delete-save">
+          <button class="btn btn--delete">
+            <img src="./assets/icon-delete.svg" alt="delete icon" />
+          </button>
+
+          <button class="btn btn--save">
+            <img src="./assets/icon-save.svg" alt="save icon" />
+            <span>Save Changes</span>
+          </button>
+        </div>
+      </header>
+      <section class="section--sections-container"></section>
+    </main>
+  </body>
+</html>
