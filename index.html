@@ -9,45 +9,68 @@
     <title>Markdown Editor</title>
   </head>
   <body>
-    <nav class="navigation"></nav>
-    <main class="main">
-      <header class="main--header">
-        <div class="close-open--btns">
-          <button class="btn btn--open-nav">
-            <img src="./assets/icon-menu.svg" alt="menu icon" />
+    <div class="app-container">
+      <nav class="navigation">
+        <span class="navigation--title">my documents</span>
+        <button class="btn btn--new-document">
+          <span>New Document</span>
+        </button>
+        <ul class="navigation--documents-list">
+          <li>
+            <img src="./assets/icon-document.svg" alt="document icon" />
+            <div class="document-inf">
+              <span class="documen--creation-date">01 April 2022</span>
+              <span class="document--name">welcome.md</span>
+            </div>
+          </li>
+        </ul>
+        <div class="theme-toggle-container">
+          <img src="./assets/icon-dark-mode.svg" alt="moon icon" />
+          <button class="btn btn--theme-switcher">
+            <div class="cyrcle"></div>
           </button>
-
-          <button class="btn btn--close-nav display-none">
-            <img src="./assets/icon-close.svg" alt="close icon" />
-          </button>
+          <img src="./assets/icon-light-mode.svg" alt="sun icon" />
         </div>
+      </nav>
+      <main class="main">
+        <header class="main--header">
+          <div class="close-open--btns">
+            <button class="btn btn--open-nav">
+              <img src="./assets/icon-menu.svg" alt="menu icon" />
+            </button>
 
-        <img class="logo" src="./assets/logo.svg" alt="logo" />
-
-        <div class="input-container--main-header">
-          <img src="./assets/icon-document.svg" alt="documen icon" />
-          <div class="input-label">
-            <label for="input--document-name">Dcoumet Name</label>
-            <input
-              id="input--document-name"
-              type="text"
-              placeholder="welcom.md"
-            />
+            <button class="btn btn--close-nav display-none">
+              <img src="./assets/icon-close.svg" alt="close icon" />
+            </button>
           </div>
-        </div>
 
-        <div class="delete-save">
-          <button class="btn btn--delete">
-            <img src="./assets/icon-delete.svg" alt="delete icon" />
-          </button>
+          <img class="logo" src="./assets/logo.svg" alt="logo" />
 
-          <button class="btn btn--save">
-            <img src="./assets/icon-save.svg" alt="save icon" />
-            <span>Save Changes</span>
-          </button>
-        </div>
-      </header>
-      <section class="section--sections-container"></section>
-    </main>
+          <div class="input-container--main-header">
+            <img src="./assets/icon-document.svg" alt="documen icon" />
+            <div class="input-label">
+              <label for="input--document-name">Dcoumet Name</label>
+              <input
+                id="input--document-name"
+                type="text"
+                placeholder="welcom.md"
+              />
+            </div>
+          </div>
+
+          <div class="delete-save">
+            <button class="btn btn--delete">
+              <img src="./assets/icon-delete.svg" alt="delete icon" />
+            </button>
+
+            <button class="btn btn--save">
+              <img src="./assets/icon-save.svg" alt="save icon" />
+              <span>Save Changes</span>
+            </button>
+          </div>
+        </header>
+        <section class="section--sections-container"></section>
+      </main>
+    </div>
   </body>
 </html>

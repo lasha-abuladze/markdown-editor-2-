@@ -16,7 +16,90 @@
   display: none !important;
 }
 
-body .main .main--header {
+html,
+body {
+  overflow-x: hidden;
+}
+
+body .app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+body .app-container .navigation {
+  width: 100%;
+  height: 100vh;
+  background-color: #2b2d31;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+body .app-container .navigation .navigation--title {
+  text-transform: uppercase;
+}
+body .app-container .navigation .btn--new-document {
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  background-color: #e46643;
+  border-radius: 5px;
+  margin-top: 32px;
+}
+body .app-container .navigation .navigation--documents-list {
+  margin-top: 25px;
+}
+body .app-container .navigation .navigation--documents-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+body .app-container .navigation .navigation--documents-list li .document-inf {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: start;
+  gap: 3px;
+}
+body .app-container .navigation .navigation--documents-list li .document-inf .documen--creation-date {
+  font-size: 11px;
+}
+body .app-container .navigation .theme-toggle-container {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+body .app-container .navigation .theme-toggle-container .btn--theme-switcher {
+  width: 48px;
+  height: 24px;
+  border-radius: 15px;
+  background-color: #b4b4b4;
+  position: relative;
+}
+body .app-container .navigation .theme-toggle-container .btn--theme-switcher .cyrcle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .app-container .main {
+  background-color: #e46643;
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+body .app-container .main .main--header {
   background-color: #2b2d31;
   display: flex;
   flex-direction: row;
@@ -25,24 +108,24 @@ body .main .main--header {
   padding-right: 16px;
   box-sizing: border-box;
 }
-body .main .main--header .close-open--btns .btn {
+body .app-container .main .main--header .close-open--btns .btn {
   width: 56px;
   height: 56px;
   background-color: #35393f;
 }
-body .main .main--header .logo {
+body .app-container .main .main--header .logo {
   display: none;
 }
-body .main .main--header .input-container--main-header {
+body .app-container .main .main--header .input-container--main-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 }
-body .main .main--header .input-container--main-header .input-label label {
+body .app-container .main .main--header .input-container--main-header .input-label label {
   display: none;
 }
-body .main .main--header .input-container--main-header .input-label input {
+body .app-container .main .main--header .input-container--main-header .input-label input {
   border: none;
   outline: none;
   background: none;
@@ -50,23 +133,23 @@ body .main .main--header .input-container--main-header .input-label input {
   font-size: 13px;
   width: 100px;
 }
-body .main .main--header .input-container--main-header .input-label input::placeholder {
+body .app-container .main .main--header .input-container--main-header .input-label input::placeholder {
   color: #ffffff;
   font-size: 13px;
 }
-body .main .main--header .delete-save {
+body .app-container .main .main--header .delete-save {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
   margin-left: auto;
 }
-body .main .main--header .delete-save .btn--save {
+body .app-container .main .main--header .delete-save .btn--save {
   background-color: #e46643;
   width: 36px;
   height: 36px;
 }
-body .main .main--header .delete-save .btn--save span {
+body .app-container .main .main--header .delete-save .btn--save span {
   display: none;
 }
 

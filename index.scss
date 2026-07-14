@@ -1,5 +1,7 @@
-$color--light-grey: #35393f;
+$color---grey: #35393f;
+$color--light-grey: #b4b4b4;
 $color--dark-grey: #2b2d31;
+$color--dark: #35393f;
 $color--white: #ffffff;
 $color--orange: #e46643;
 
@@ -31,63 +33,148 @@ $color--orange: #e46643;
   display: none !important;
 }
 
+html,
 body {
-  .main {
-    .main--header {
+  overflow-x: hidden;
+}
+
+body {
+  .app-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .navigation {
+      width: 100%;
+      height: 100vh;
       background-color: $color--dark-grey;
-      @include flex-row();
-      gap: 24px;
-      padding-right: 16px;
+      grid-column: 1 /2;
+      grid-row: 1 / 3;
+
+      color: $color--white;
+      padding: 25px;
       box-sizing: border-box;
-      .close-open--btns {
-        .btn {
-          width: 56px;
-          height: 56px;
+      position: relative;
+
+      .navigation--title {
+        text-transform: uppercase;
+      }
+
+      .btn--new-document {
+        width: 100%;
+        height: 40px;
+        color: $color--white;
+        background-color: $color--orange;
+        border-radius: 5px;
+        margin-top: 32px;
+      }
+
+      .navigation--documents-list {
+        margin-top: 25px;
+        li {
+          @include flex-row();
+          gap: 16px;
+          .document-inf {
+            font-size: 15px;
+            @include flex-colum();
+            align-items: start;
+            gap: 3px;
+            .documen--creation-date {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .theme-toggle-container {
+        position: absolute;
+        bottom: 25px;
+        @include flex-row();
+        gap: 8px;
+
+        .btn--theme-switcher {
+          width: 48px;
+          height: 24px;
+          border-radius: 15px;
           background-color: $color--light-grey;
-        }
-      }
+          position: relative;
 
-      .logo {
-        display: none;
-      }
-
-      .input-container--main-header {
-        @include flex-row();
-        gap: 16px;
-
-        .input-label {
-          label {
-            display: none;
-          }
-
-          input {
-            border: none;
-            outline: none;
-            background: none;
-            color: $color--white;
-            font-size: 13px;
-            width: 100px;
-          }
-
-          input::placeholder {
-            color: $color--white;
-            font-size: 13px;
+          .cyrcle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $color--white;
+            position: absolute;
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
       }
+    }
 
-      .delete-save {
+    .main {
+      background-color: #e46643;
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      .main--header {
+        background-color: $color--dark-grey;
         @include flex-row();
-        gap: 16px;
-        // align-self:;
-        margin-left: auto;
+        gap: 24px;
+        padding-right: 16px;
+        box-sizing: border-box;
 
-        .btn--save {
-          background-color: $color--orange;
-          width: 36px;
-          height: 36px;
-          span {
-            display: none;
+        .close-open--btns {
+          .btn {
+            width: 56px;
+            height: 56px;
+            background-color: $color---grey;
+          }
+        }
+
+        .logo {
+          display: none;
+        }
+
+        .input-container--main-header {
+          @include flex-row();
+          gap: 16px;
+
+          .input-label {
+            label {
+              display: none;
+            }
+
+            input {
+              border: none;
+              outline: none;
+              background: none;
+              color: $color--white;
+              font-size: 13px;
+              width: 100px;
+            }
+
+            input::placeholder {
+              color: $color--white;
+              font-size: 13px;
+            }
+          }
+        }
+
+        .delete-save {
+          @include flex-row();
+          gap: 16px;
+          // align-self:;
+          margin-left: auto;
+
+          .btn--save {
+            background-color: $color--orange;
+            width: 36px;
+            height: 36px;
+            span {
+              display: none;
+            }
           }
         }
       }
