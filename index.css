@@ -25,6 +25,19 @@ body {
   transform: translateX(-250px) !important;
 }
 
+.body--dark .navigation .theme-toggle-container .btn--theme-switcher .cyrcle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  left: calc(100% - 6px) !important;
+  transform: translate(-100%, -50%) !important;
+}
+.body--dark .main {
+  background-color: #35393f;
+}
+
 body .app-container {
   width: calc(100% + 250px);
   display: grid;
@@ -98,11 +111,12 @@ body .app-container .navigation .theme-toggle-container .btn--theme-switcher .cy
   left: 6px;
   top: 50%;
   transform: translateY(-50%);
+  transition: all 0.5s;
 }
 body .app-container .main {
-  background-color: #e46643;
   grid-column: 2/3;
   grid-row: 1/3;
+  transition: all 0.5s;
 }
 body .app-container .main .main--header {
   background-color: #2b2d31;
