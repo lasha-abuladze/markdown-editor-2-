@@ -6,10 +6,12 @@
 
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./index.css" />
+
+    <script defer src="./index.js"></script>
     <title>Markdown Editor</title>
   </head>
   <body>
-    <div class="app-container">
+    <div class="app-container translate">
       <nav class="navigation">
         <span class="navigation--title">my documents</span>
         <button class="btn btn--new-document">
@@ -35,11 +37,11 @@
       <main class="main">
         <header class="main--header">
           <div class="close-open--btns">
-            <button class="btn btn--open-nav">
+            <button class="btn btn--open-nav btn--menu">
               <img src="./assets/icon-menu.svg" alt="menu icon" />
             </button>
 
-            <button class="btn btn--close-nav display-none">
+            <button class="btn btn--close-nav btn--menu display-none">
               <img src="./assets/icon-close.svg" alt="close icon" />
             </button>
           </div>
